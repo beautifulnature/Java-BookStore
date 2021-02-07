@@ -18,15 +18,15 @@
     <form name="book_form" method="post" action="update">
   </c:if>
   <c:if test="${book == null}">
-    <form name="book_form" method="post" action="insert">	    <form name="book_form" method="post" action="insert">
-    <h2>	  </c:if>
-    <h2>
-    </h2>	        <c:if test="${book != null}">
-	  <p><label>Title:</label>	          Edit Book Form
-    <input type="text" name="booktitle" /></p>	        </c:if>
-	  <p><label>Author:</label>	        <c:if test="${book == null}">
+    <form name="book_form" method="post" action="insert>
+  </c:if>
+  <c:if test="${book == null}">
     <input type="text" name="bookauthor" /></p>	          New Book Form
     <p><label>Price:</label>	        </c:if>
+    	        <c:if test="${book != null}">
+	  <p><label>Title:</label>	          Edit Book Form
+    <input type="text" name="booktitle" /></p>	        </c:if>
+	  <p><label>Author:</label>	        
     <input type="text" name="bookprice" /></p>	      </h2>
 	  <p><input type="submit" value="Submit"></p>	      <c:if test="${book != null}">
 	</form>	        <input type="hidden" name="id" value="<c:out value="${book.id}"/>" />
