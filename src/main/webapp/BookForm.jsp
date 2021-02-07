@@ -18,7 +18,7 @@
 		<form name="book_form" method="post" action="update">
 	</c:if>
 	<c:if test="${book == null}">
-		<form name="book_form" method="post" action="insert>
+		<form name="book_form" method="post" action="insert">
 	</c:if>
 	
 	<h2>
