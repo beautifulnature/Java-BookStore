@@ -30,16 +30,10 @@
 		</c:if>
 	</h2>
 	
-	<input type="text" name="bookauthor" />
-	<input type="text" name="booktitle" />
-	
-	<p><label>Title:</label>	          
-	
-	<p><label>Author:</label>	        
+	<p><label>Title:</label>
 	<c:if test="${book != null}">
 		<input type="hidden" name="id" value="<c:out value='${book.id}'/>" />
 	</c:if>
-	<p><label>Title:</label>
 	<input type="text" name="booktitle" value="<c:out value='${book.title}'/>"/></p>
 	<p><label>Author:</label>
 	<input type="text" name="bookauthor" value="<c:out value='${book.author}'/>"/></p>
