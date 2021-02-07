@@ -14,18 +14,32 @@
 	</ul>
 
 <div class="container">
-    <form name="book_form" method="post" action="insert">
+	<c:if test="${book != null}">
+    <form name="book_form" method="post" action="update">
+  </c:if>
+  <c:if test="${book == null}">
+    <form name="book_form" method="post" action="insert">	    <form name="book_form" method="post" action="insert">
+    <h2>	  </c:if>
     <h2>
-        New Book Form
-    </h2>
-	  <p><label>Title:</label>
-    <input type="text" name="booktitle" /></p>
-	  <p><label>Author:</label>
-    <input type="text" name="bookauthor" /></p>
-    <p><label>Price:</label>
-    <input type="text" name="bookprice" /></p>
-	  <p><input type="submit" value="Submit"></p>
-	</form>
-	</div>
+    </h2>	        <c:if test="${book != null}">
+	  <p><label>Title:</label>	          Edit Book Form
+    <input type="text" name="booktitle" /></p>	        </c:if>
+	  <p><label>Author:</label>	        <c:if test="${book == null}">
+    <input type="text" name="bookauthor" /></p>	          New Book Form
+    <p><label>Price:</label>	        </c:if>
+    <input type="text" name="bookprice" /></p>	      </h2>
+	  <p><input type="submit" value="Submit"></p>	      <c:if test="${book != null}">
+	</form>	        <input type="hidden" name="id" value="<c:out value="${book.id}"/>" />
+      </c:if>
+  	  <p><label>Title:</label>
+      <input type="text" name="booktitle" value="<c:out value="${book.title}"/>"/></p>
+  	  <p><label>Author:</label>
+      <input type="text" name="bookauthor" value="<c:out value="${book.author}"/>"/></p>
+      <p><label>Price:</label>
+      <input type="text" name="bookprice" value="<c:out value="${book.price}"/>"/></p>
+  	  <p><input type="submit" value="Submit"></p>
+	   </form>
+
+	</div>		</div>
 </body>
 </html>
