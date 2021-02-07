@@ -31,21 +31,22 @@
 	</h2>
 	
 	<input type="text" name="bookauthor" />
-	<input type="text" name="booktitle" /></p>
+	<input type="text" name="booktitle" />
 	
 	<p><label>Title:</label>	          
 	
 	<p><label>Author:</label>	        
 	<c:if test="${book != null}">
-		<input type="hidden" name="id" value="<c:out value="${book.id}"/>" />
+		<input type="hidden" name="id" value="<c:out value='${book.id}'/>" />
 	</c:if>
 	<p><label>Title:</label>
-	<input type="text" name="booktitle" value="<c:out value="${book.title}"/>"/></p>
+	<input type="text" name="booktitle" value="<c:out value='${book.title}'/>"/></p>
 	<p><label>Author:</label>
-	<input type="text" name="bookauthor" value="<c:out value="${book.author}"/>"/></p>
+	<input type="text" name="bookauthor" value="<c:out value='${book.author}'/>"/></p>
 	<p><label>Price:</label>
-	<input type="text" name="bookprice" value="<c:out value="${book.price}"/>"/></p>
+	<input type="text" name="bookprice" value="<c:out value='${book.price}'/>"/></p>
 	<p><input type="submit" value="Submit"></p>
 	</form>
+</div>
 </body>
 </html>
